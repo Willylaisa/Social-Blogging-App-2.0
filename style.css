@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: serif;
+    background-color: #e8f5fc;
+}
+
+nav {
+    background-color: #55C2C3;
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1.5rem;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.link--myblog {
+    margin-right: auto;
+    font-size: 1.5rem;
+}
+
+.nav--links {
+    text-decoration: none;
+    color: #333;
+}
+
+.ul-link{
+    margin-left: 1rem;
+    font-size: 1.2rem;
+}
+
+.profile--page {
+    padding: 1rem 2rem;
+}

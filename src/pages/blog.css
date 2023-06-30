@@ -1,0 +1,127 @@
+.Blog--Container {
+  padding: 1rem 2rem;
+  padding-top: 0;
+}
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 20px;
+}
+  
+.blog-post {
+  background-color:#7E8C9C ;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  
+.blog-post h2 {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.blog-post p {
+  margin-bottom: 10px;
+}
+
+.comments {
+  margin-top: 20px;
+}
+
+.comments h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.comment {
+  margin-bottom: 10px;
+}
+
+.comment p {
+  margin: 0;
+}
+
+.comment .author {
+  font-weight: bold;
+}
+
+.comment .date {
+  font-size: 12px;
+  color: #888;
+}
+
+input[type='text'] {
+  
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0px 0px 4px;
+  border-right: none;
+}
+.commentButton {
+  width: 40px;
+  height: 31.1px;
+  background-color: #fff;
+  font-size: 1rem;
+  border: none;
+  
+}
+.likeButton {
+  padding: 2px;
+  background-color: transparent;
+  color: red;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 3px;
+}
+
+.button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.searchBar {
+  margin : 20px;
+  width:70%;
+  height: 28px;
+}
+
+.searchInput{
+  width: 80%;
+  padding: 5px;
+  border: 3px solid #0c243c;
+  border-right: none;
+  outline: none;
+}
+.searchbutton {
+      width: 36px;
+      height: 31px;
+      background-color: #0c243c;
+      border: 3px solid #0c243c;
+      text-align: center;
+      color:#fff;
+     
+}
+
+
+
+  
+  

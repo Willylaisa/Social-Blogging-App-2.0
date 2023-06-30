@@ -27,7 +27,7 @@ const BlogPost = ({ post, onLike, onAddComment }) => {
 
       <div className="image-container">
 
-      <img src={post.image} alt="Blog Post"  width={500}/>
+      <img src={post.image} alt="Blog Post" className='image'/>
 
       </div>
 

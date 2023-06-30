@@ -23,7 +23,7 @@ export default function Form() {
     }
     function handleSubmit(event) {
         event.preventDefault()
-        window.open("/", "_self")
+        window.open("/Social-Blogging-App-2.0/", "_self")
     }
 
     return (

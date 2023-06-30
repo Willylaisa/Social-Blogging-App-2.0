@@ -24,7 +24,7 @@ export default function Login() {
     function handleSubmit(event) {
         event.preventDefault()
         formData.password === formData.confirmPassword ?
-        window.open("/", "_self"):
+        window.open("/Social-Blogging-App-2.0/", "_self"):
         alert("passwords do not match")
     }
     return (

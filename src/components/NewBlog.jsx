@@ -9,7 +9,7 @@ export default function Blog(props) {
                 <fieldset>
                     
                     <legend>Write a new blog</legend>
-                    <textarea type="text" className='blog-input' placeholder='Write your Blog here' name='content' onChange={props.changeContent} value={props.currentBlog.content} />
+                    <textarea type="text" className='blog-input' placeholder='Write your Blog here' name='content' onChange={props.changeContent} value={props.currentBlog} />
 
                     <button className='blog-post-btn' onClick={props.post}> Post Blog </button>
                 </fieldset>

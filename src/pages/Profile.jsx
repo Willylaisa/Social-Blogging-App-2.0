@@ -5,13 +5,22 @@ import Blog from "../components/NewBlog"
 
 export default function Profile() {
 
-    const resultDiv = document.getElementById("blog-post")
-    const [blog, setBlog] = React.useState(
-        JSON.parse(localStorage.getItem("blog")) || []
+      const [blog, setBlog] = React.useState(
+        JSON.parse(localStorage.getItem("blog")) || 
+        { 
+            id: "",
+            content: "",
+            author: "",
+            coverImg: "",
+            time: "",
+            tags: []
+        }
         )
     React.useEffect(() => {
         localStorage.setItem("blog", JSON.stringify(blog))
     }, [blog])
+    
+    /*
     function newBlog() {
         return ({
             id: "",
@@ -21,22 +30,25 @@ export default function Profile() {
             time: "",
             tags: []
         })
-    }
+    }*/
     function changeContent(event) {
-        const { value } = event.target
-        setBlog(prevBlog => prevBlog.map(blogItem => {
-            return {...blogItem, content: value}
-        }))
+        const { value, name } = event.target
+        setBlog(prevBlog => {
+            return {...prevBlog,
+                   [name]: value
+                   }
+        }
     }
-    function findBlog() {
+    /*function findBlog() {
         return blog.find(note => {
             return note
         }) 
-    }
+    }*/
     function post() {
-        const postedBlog = blog.map(prevBlog => prevBlog)
-        const blogContent = postedBlog[0].content
-        resultDiv.textContent = blogContent
+        const resultDiv = document.getElementById("blog-post")
+  
+        const postedBlog = blog.content
+        resultDiv.textContent = postedBlog
       }
     // STATES
     const [profile, setProfile] = React.useState(
@@ -106,9 +118,9 @@ export default function Profile() {
                 handleClick={editProfile}
                 />
                 <Blog 
-                    createBlog={newBlog}
+                    /*createBlog={newBlog}*/
                     changeContent={changeContent}
-                    currentBlog={findBlog}
+                    currentBlog={blog.content}
                     post={post}
                 />
             </div>
